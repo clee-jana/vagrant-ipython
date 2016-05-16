@@ -20,18 +20,20 @@ Vagrant.configure(2) do |config|
     cd ipython_notebooks
 
     ipython profile create jana
-    rm -f ~/.ipython/profile_jana/startup/*
-    ln -s ~/ipython_notebooks/cookbook/profile_jana/startup/* ~/.ipython/profile_jana/startup/
 
     sudo pip install pip --upgrade
 
     sudo -H pip install -r requirements.txt
+
   SHELL
 
   config.vm.provision :shell, run: 'always', privileged: false, inline: <<-SHELL
     cd ipython_notebooks
 
     sudo -H pip install -r requirements.txt
+
+    rm -f ~/.ipython/profile_jana/startup/*
+    ln -s ~/ipython_notebooks/cookbook/profile_jana/startup/* ~/.ipython/profile_jana/startup/
 
     ipython notebook --profile=jana --ip=0.0.0.0 --no-browser &
   SHELL
