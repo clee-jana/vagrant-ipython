@@ -21,7 +21,7 @@
 ## Starting Vagrant
 
 ```
-# From this repos root directory.
+# From this repo's root directory.
 # The first time will take a few minutes as it downloads the image and
 # installs the necessary libraries
 $> vagrant up
