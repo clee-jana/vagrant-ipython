@@ -6,9 +6,17 @@
 
 * Download [Vagrant](http://vagrantup.com)
 * Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-* Start your vagrant image with `vagrant up` and SSH in with `vagrant ssh`
 * Installation assumes that the Jana `ipython_notebook` repo is
   located at the directory tree level as this repo.
+* Start your vagrant image with `vagrant up` and SSH in with `vagrant ssh`.
+  This will download a fairly large file (2 GB) to your computer and
+  could take some time. I had trouble getting this to work in the office
+  reliably and it would disconnect the download. It took 3 tries to
+  download the file for me.
+* If it completed successfully, you'll see the line:
+```
+You're all set! Please visit http://localhost:8888 in your browser!
+```
 
 ```
 # example
